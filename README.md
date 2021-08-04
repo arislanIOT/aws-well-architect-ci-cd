@@ -1,3 +1,5 @@
+![alt text](https://github.com/arislanIOT/aws-well-architect-ci-cd/blob/master/AwsCiCD-2-2.png?raw=true)
+
 # Documentation for aws ci/cd pipeline using Aws service. 
 
 ## Services Used and Count
