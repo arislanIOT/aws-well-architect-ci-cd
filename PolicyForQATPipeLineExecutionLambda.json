@@ -1,0 +1,13 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "imagebuilder:GetImagePipeline",
+                "imagebuilder:StartImagePipelineExecution"
+            ],
+            "Resource": "arn:aws:imagebuilder:us-east-1:440136985809:image-pipeline/qat-aws-well-architecht-imagebuilderpipe"
+        }
+    ]
+}
