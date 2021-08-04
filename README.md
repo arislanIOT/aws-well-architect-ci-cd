@@ -97,7 +97,7 @@ Here the both user have different IAM role with custom policy.
                 "codepipeline:GetPipelineExecution"
             ],
             "Resource": [
-                "arn:aws:codepipeline:us-east-1:440136985809:DjangoPIpeLine"
+                "arn:aws:codepipeline:us-east-1:666666:DjangoPIpeLine"
             ],
             "Effect": "Allow"
         },
@@ -107,7 +107,7 @@ Here the both user have different IAM role with custom policy.
             ],
             "Effect": "Allow",
             "Resource": [
-                "arn:aws:codepipeline:us-east-1:440136985809:DjangoPIpeLine/ProdcutionApproval/Approval-QT"
+                "arn:aws:codepipeline:us-east-1:6666:DjangoPIpeLine/ProdcutionApproval/Approval-QT"
 ```
 
 Once this stage is passed the lambda fucntion to execute the production Image Builder pipeline is executed. 
@@ -125,7 +125,7 @@ def lambda_handler(event, context):
     # TODO implement
     
     image_build = image_pipeline.start_image_pipeline_execution(
-        imagePipelineArn="arn:aws:imagebuilder:us-east-1:440136985809:image-pipeline/prod-imagebuilder-pipeline"
+        imagePipelineArn="arn:aws:imagebuilder:us-east-1:66666:image-pipeline/prod-imagebuilder-pipeline"
         
         )
     response = pipeline.put_job_success_result(
@@ -149,7 +149,7 @@ Role
                 "imagebuilder:GetImagePipeline",
                 "imagebuilder:StartImagePipelineExecution"
             ],
-            "Resource": "arn:aws:imagebuilder:us-east-1:440136985809:image-pipeline/qat-aws-well-architecht-imagebuilderpipe"
+            "Resource": "arn:aws:imagebuilder:us-east-1:66666:image-pipeline/qat-aws-well-architecht-imagebuilderpipe"
         }
     ]
 }
